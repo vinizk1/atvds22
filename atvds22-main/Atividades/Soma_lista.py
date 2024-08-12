@@ -1,24 +1,11 @@
-lista = []
+n = int(input("Digite o tamanho da lista"))
 
-while True:
-    options = input (
-        '''
-            Escolha a opção:
-            N: Novo numero;
-            S: Soma;
-            Q: Sair
-        '''
-    )
+soma = 0
 
-    if options == 'n':
-        numero = int(input('Digite o numero'))
-        lista.append(numero)
+for i in range(n):
+    nota = float(input("Digite a nota"))
+    soma += nota
 
-    elif options == 's':
-        print(sum(lista))
+media = soma / n
 
-    def sum(list):
-        result = 0
-        for i in list:
-            result = result + 1
-        return result
+print(f"media das {n} notas é {media}")
